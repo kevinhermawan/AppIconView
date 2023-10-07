@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "appicon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kevinhermawan/AppIcon.git",
+      "state" : {
+        "revision" : "6c8ba1aabda5bed6bcf023dd9e19ae07e8d46c0f",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
