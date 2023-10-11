@@ -1,3 +1,9 @@
+## 2.0.2
+
+### Misc
+
+- chore: updates dependencies
+
 ## 2.0.1
 
 ### Misc
