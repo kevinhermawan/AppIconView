@@ -43,8 +43,8 @@ public struct AppIconView: View {
 struct AppIconView_Previews: PreviewProvider {
     static var previews: some View {
         let appIcons: [Icon] = [
-            Icon(key: "Default", label: "Default", iconName: "AppIcon-Default", isDefault: true),
-            Icon(key: "Secondary", label: "Default", iconName: "AppIcon-Secondary", isDefault: false)
+            Icon(label: "Default", iconName: "AppIcon-Default", isDefault: true),
+            Icon(label: "Default", iconName: "AppIcon-Secondary", isDefault: false)
         ]
         
         return NavigationView {
