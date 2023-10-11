@@ -1,3 +1,9 @@
+## 2.0.3
+
+### Improved
+
+- refactor: changes `currentAppIcon` from `State` to `Binding`
+
 ## 2.0.2
 
 ### Misc
