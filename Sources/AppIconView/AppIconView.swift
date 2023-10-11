@@ -9,12 +9,13 @@ import AppIcon
 import SwiftUI
 
 public struct AppIconView: View {
+    @Binding private var currentAppIcon: Icon?
+    
     @State private var isErrorPresented: Bool = false
-    @State private var currentAppIcon: Icon? = nil
     @State private var definedAppIcons = [Icon]()
     
-    public init(current: Icon?, defined: [Icon]) {
-        _currentAppIcon = State(wrappedValue: current)
+    public init(current: Binding<Icon?>, defined: [Icon]) {
+        _currentAppIcon = Binding(projectedValue: current)
         _definedAppIcons = State(wrappedValue: defined)
     }
     
@@ -47,7 +48,7 @@ struct AppIconView_Previews: PreviewProvider {
         ]
         
         return NavigationView {
-            AppIconView(current: appIcons.first, defined: appIcons)
+            AppIconView(current: .constant(AppIcon.current), defined: appIcons)
                 .navigationTitle("AppIconView")
         }
     }

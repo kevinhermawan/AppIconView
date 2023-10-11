@@ -33,9 +33,11 @@ import AppIcon
 import AppIconView
 
 struct ContentView: View {
+    @State private var currentAppIcon: Icon? = AppIcon.current
+
     var body: some View {
         NavigationView {
-            AppIconView(current: AppIcon.current, defined: AppIcon.defined)
+            AppIconView(current: $currentAppIcon, defined: AppIcon.defined)
                 .navigationTitle("App Icon")
         }
     }
