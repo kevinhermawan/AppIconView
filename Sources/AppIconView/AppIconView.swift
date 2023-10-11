@@ -19,17 +19,17 @@ public struct AppIconView: View {
     }
     
     public var body: some View {
-        List(definedAppIcons, id: \.name) { icon in
-            AppIconListItem(icon.name, imageName: icon.imageName) {
+        List(definedAppIcons) { icon in
+            AppIconListItem(icon.label, iconName: icon.iconName) {
                 setAppIcon(to: icon)
             }
-            .selected(currentAppIcon?.imageName == icon.imageName)
+            .selected(currentAppIcon?.iconName == icon.iconName)
         }
         .alert("Unable to change the icon.", isPresented: $isErrorPresented) {}
     }
     
     private func setAppIcon(to icon: Icon) {
-        AppIcon.set(icon: icon) { error in
+        AppIcon.set(to: icon) { error in
             if let _ = error {
                 isErrorPresented = true
             } else {
@@ -42,8 +42,8 @@ public struct AppIconView: View {
 struct AppIconView_Previews: PreviewProvider {
     static var previews: some View {
         let appIcons: [Icon] = [
-            Icon(name: "Default", imageName: "AppIcon-Default", isDefault: true),
-            Icon(name: "Secondary", imageName: "AppIcon-Secondary", isDefault: false)
+            Icon(key: "Default", label: "Default", iconName: "AppIcon-Default", isDefault: true),
+            Icon(key: "Secondary", label: "Default", iconName: "AppIcon-Secondary", isDefault: false)
         ]
         
         return NavigationView {

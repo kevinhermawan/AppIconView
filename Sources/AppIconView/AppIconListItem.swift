@@ -10,13 +10,13 @@ import SwiftUI
 internal struct AppIconListItem: View {
     private var isSelected: Bool = false
     
-    private let name: String
-    private let imageName: String
+    private let label: String
+    private let iconName: String
     private let action: () -> Void
     
-    internal init(_ name: String, imageName: String, action: @escaping () -> Void) {
-        self.name = name
-        self.imageName = imageName
+    internal init(_ name: String, iconName: String, action: @escaping () -> Void) {
+        self.label = name
+        self.iconName = iconName
         self.action = action
     }
     
@@ -24,9 +24,9 @@ internal struct AppIconListItem: View {
         Button(action: action) {
             HStack {
                 HStack(spacing: 16) {
-                    AppIconImage(imageName)
+                    AppIconImage(iconName)
                     
-                    Text(name).tint(.primary)
+                    Text(label).tint(.primary)
                 }
                 
                 Spacer()
@@ -50,9 +50,9 @@ internal struct AppIconListItem: View {
 struct AppIconListItem_Previews: PreviewProvider {
     static var previews: some View {
         Form {
-            AppIconListItem("Default", imageName: "AppIcon-Default") {}
+            AppIconListItem("Default", iconName: "AppIcon-Default") {}
             
-            AppIconListItem("Secondary", imageName: "AppIcon-Secondary") {}
+            AppIconListItem("Secondary", iconName: "AppIcon-Secondary") {}
                 .selected(true)
         }
     }

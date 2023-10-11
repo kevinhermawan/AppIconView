@@ -12,8 +12,8 @@ You can add `AppIconView` and `AppIcon` as dependencies to your project using Sw
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/kevinhermawan/AppIcon.git", .upToNextMajor(from: "1.0.0")),
-    .package(url: "https://github.com/kevinhermawan/AppIconView.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/kevinhermawan/AppIcon.git", .upToNextMajor(from: "2.0.0")),
+    .package(url: "https://github.com/kevinhermawan/AppIconView.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 

@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kevinhermawan/AppIcon.git",
       "state" : {
-        "revision" : "6c8ba1aabda5bed6bcf023dd9e19ae07e8d46c0f",
-        "version" : "1.0.3"
+        "revision" : "42dafdb79673b54fd9cfdecd82ef3c5bb8330ad0",
+        "version" : "2.0.1"
       }
     }
   ],
